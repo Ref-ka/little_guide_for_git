@@ -22,4 +22,13 @@ cd (a name of derictory/ "~" to move to root derictory in your computer/ ".." to
 3. git add (name of file or derictory/ '--all' for add all content from current derictory) "this is prepare befor make commit"
 4. git commit (name of file or derictory/ '--all' for add all content from current derictory) "for save all changes"
 
-## 4. ...
+## There is some information about states of files in git:
+
+```mermaid
+graph LR;
+  untracked -- "git add" --> staged;
+  staged    -- "git commit"     --> tracked/comitted;
+  staged -- "make changes" --> staged version and modified version;
+  modified -- "git add" --> staged;
+
+``` 
